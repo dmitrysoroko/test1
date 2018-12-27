@@ -1,9 +1,39 @@
 <!doctype html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .btn {
+                background-color: DodgerBlue;
+                border-radius: 20px;
+                border: none;
+                color: white;
+                padding: 10px 13px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            /* Darker background on mouse-over */
+            .btn:hover {
+                background-color: RoyalBlue;
+            }
+        </style>
         <title>test1</title>
     </head>
     <body>
-    <script src="dist/main.js"></script>
+    <div>
+        <label>Card Number</label>
+        <input id="cardNumberInput"/>
+    </div>
+    <div>
+        <label>Comment</label>
+        <input id="cardCommentInput"/>
+    </div>
+    <button id="addCardButton">Add</button>
+    <div id="cardList">
+        <label>Cards:</label>
+    </div>
     </body>
 </html>
+
+<script src="dist/main.js"></script>
