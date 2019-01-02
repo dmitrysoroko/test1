@@ -2,37 +2,42 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            .btn {
-                background-color: DodgerBlue;
-                border-radius: 20px;
-                border: none;
-                color: white;
-                padding: 10px 13px;
-                font-size: 16px;
-                cursor: pointer;
-            }
-
-            /* Darker background on mouse-over */
-            .btn:hover {
-                background-color: RoyalBlue;
-            }
-        </style>
         <title>test1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body>
-    <div>
-        <label>Card Number</label>
-        <input id="cardNumberInput"/>
-    </div>
-    <div>
-        <label>Comment</label>
-        <input id="cardCommentInput"/>
-    </div>
-    <button id="addCardButton">Add</button>
-    <div id="cardList">
-        <label>Cards:</label>
-    </div>
+        <div id="modalDialog" class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__container">
+                <p>Are you sure about that?</p>
+                <div class="modal-actions">
+                    <button class="btn" id="modalCancelButton">Cancel</button>
+                    <button class="btn" id="modalDeleteButton">Delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="paper">
+                <div class="add-container">
+                    <div class="input">
+                        <label for="cardNumberInput">Card Number</label>
+                        <input id="cardNumberInput"/>
+                    </div>
+                    <div class="input">
+                        <label for="cardCommentInput">Comment</label>
+                        <textarea rows="4" cols="20" id="cardCommentInput"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn" id="addCardButton">Add</button>
+                    </div>
+                </div>
+                <div id="errorMessage" class="error-message">&nbsp;</div>
+            </div>
+            <div id="cardList" class="paper list">
+                <label>Cards:</label>
+            </div>
+        </div>
+        <div id="tooltip"></div>
     </body>
 </html>
 
